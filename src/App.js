@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './app.css';
+import AddPlayer from "./components/AddPlayer.js";
+import Dice from "./components/Dice.js";
+import Player from "./components/Player.js";
+import SidePlayer from "./components/sidePlayer.js";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{width: '100%', maxWidth: '700px'}} className="d-flex">
+      <div>
+
+        <AddPlayer />
+        <Dice />
+
+        <Player />
+      </div>
+      <div>
+
+        <SidePlayer />  
+
+      </div>
     </div>
-  );
+  )
 }
 
 export default App;
